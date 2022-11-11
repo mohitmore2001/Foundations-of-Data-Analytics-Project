@@ -9,5 +9,4 @@ pandas
 catboost
 xgboost
 plotly
-io 
 squarify
