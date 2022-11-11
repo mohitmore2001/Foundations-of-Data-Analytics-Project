@@ -1,0 +1,16 @@
+email
+tabnanny
+streamlit
+streamlit_option_menu
+PIL
+numpy
+datetime
+sklearn
+matplotlib
+seaborn
+pandas
+catboost
+xgboost
+plotly
+io 
+squarify
