@@ -23,9 +23,9 @@ from catboost import CatBoostRegressor
 from sklearn.metrics import mean_absolute_error
 
 
-df = pd.read_csv("G:/1College/7th Sem/F1 - Data Analytics/Project/App/data/trainForLearnInformation.csv")
-centerInformation = pd.read_csv("G:/1College/7th Sem/F1 - Data Analytics/Project/App/data/centerInformation.csv")
-mealInformation = pd.read_csv("G:/1College/7th Sem/F1 - Data Analytics/Project/App/data/mealInformation.csv")
+df = pd.read_csv("data/trainForLearnInformation.csv")
+centerInformation = pd.read_csv("data/centerInformation.csv")
+mealInformation = pd.read_csv("data/mealInformation.csv")
 df = df.merge(centerInformation, on='center_id', how='left')    
 df = df.merge(mealInformation, on='meal_id', how='left')
 
@@ -43,8 +43,8 @@ with st.sidebar:
     }
     )
 
-logo = Image.open(r'G:\1College\7th Sem\F1 - Data Analytics\Project\App\images\icon1.png')
-profile = Image.open(r'G:\1College\7th Sem\F1 - Data Analytics\Project\App\images\icon1.png')
+logo = Image.open(r'images\icon1.png')
+profile = Image.open(r'images\icon1.png')
 
 if choose == "Descriptive Analytics":
     col1, col2 = st.columns( [0.8, 0.2])
@@ -70,7 +70,7 @@ if choose == "Descriptive Analytics":
     st.code(code, language='python')
 
     #Allow users to check the results of the first code snippet by clicking the 'Check Results' button
-    dfnow=pd.read_csv(r'G:\1College\7th Sem\F1 - Data Analytics\Project\App\data\trainForLearnInformation.csv')
+    dfnow=pd.read_csv(r'data\trainForLearnInformation.csv')
     df_head=dfnow.head()
     if st.button('Check Results', key='1'):
         st.write(df_head)
@@ -82,7 +82,7 @@ if choose == "Descriptive Analytics":
     st.code(code, language='python')
 
     #Allow users to check the results of the second code snippet by clicking the 'Check Results' button
-    dfnow=pd.read_csv(r'G:\1College\7th Sem\F1 - Data Analytics\Project\App\data\trainForLearnInformation.csv')
+    dfnow=pd.read_csv(r'data\trainForLearnInformation.csv')
     df_tail=df.tail()
     if st.button('Check Results', key='2'):
         st.write(df_tail)
@@ -259,10 +259,10 @@ elif choose == "Predictive Analytics":
 
     st.write("Prediction Going ON!!!!!!!!!!!!!! Please Wait")
 
-    df_train = pd.read_csv("G:/1College/7th Sem/F1 - Data Analytics/Project/App/data/trainForLearnInformation.csv")
-    df_test = pd.read_csv("G:/1College/7th Sem/F1 - Data Analytics/Project/App/data/testInformation.csv")
-    centerInformation2 = pd.read_csv("G:/1College/7th Sem/F1 - Data Analytics/Project/App/data/centerInformation.csv")
-    mealInformation2 = pd.read_csv("G:/1College/7th Sem/F1 - Data Analytics/Project/App/data/mealInformation.csv")
+    df_train = pd.read_csv("data/trainForLearnInformation.csv")
+    df_test = pd.read_csv("data/testInformation.csv")
+    centerInformation2 = pd.read_csv("data/centerInformation.csv")
+    mealInformation2 = pd.read_csv("data/mealInformation.csv")
 
     # Validate to return dataframe
     learnFromTrainData = pd.concat([df_train, df_test], axis=0)
