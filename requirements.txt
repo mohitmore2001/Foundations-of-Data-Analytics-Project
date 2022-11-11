@@ -1,5 +1,3 @@
-email
-tabnanny
 streamlit
 streamlit_option_menu
 PIL
