@@ -43,8 +43,8 @@ with st.sidebar:
     }
     )
 
-logo = Image.open(r'images\icon1.png')
-profile = Image.open(r'images\icon1.png')
+logo = Image.open(r'images/icon1.png')
+profile = Image.open(r'images/icon1.png')
 
 if choose == "Descriptive Analytics":
     col1, col2 = st.columns( [0.8, 0.2])
