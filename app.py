@@ -70,7 +70,7 @@ if choose == "Descriptive Analytics":
     st.code(code, language='python')
 
     #Allow users to check the results of the first code snippet by clicking the 'Check Results' button
-    dfnow=pd.read_csv(r'data\trainForLearnInformation.csv')
+    dfnow=pd.read_csv(r'data/trainForLearnInformation.csv')
     df_head=dfnow.head()
     if st.button('Check Results', key='1'):
         st.write(df_head)
@@ -82,7 +82,7 @@ if choose == "Descriptive Analytics":
     st.code(code, language='python')
 
     #Allow users to check the results of the second code snippet by clicking the 'Check Results' button
-    dfnow=pd.read_csv(r'data\trainForLearnInformation.csv')
+    dfnow=pd.read_csv(r'data/trainForLearnInformation.csv')
     df_tail=df.tail()
     if st.button('Check Results', key='2'):
         st.write(df_tail)
